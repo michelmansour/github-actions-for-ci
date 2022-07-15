@@ -13,6 +13,8 @@ jobs:
   S3BucketList:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump the env
+        run: env
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
